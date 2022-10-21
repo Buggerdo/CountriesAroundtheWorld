@@ -25,6 +25,7 @@ function SwitchCountry() {
         country = algeria;  
     }  
     DisplayColors(country);
+    
 }
 
 function DisplayColors(country) {
@@ -33,5 +34,10 @@ function DisplayColors(country) {
     document.getElementById("HelloWorld").innerHTML = country.greeting;
     document.getElementById("Color1").style.backgroundColor = country.colors[0];
     document.getElementById("Color2").style.backgroundColor = country.colors[1];
+    if(country.colors.length > 2) {
     document.getElementById("Color3").style.backgroundColor = country.colors[2];
+    }
+    else {
+        document.getElementById("Color3").style.backgroundColor = country.colors[0];
+    }
 }
